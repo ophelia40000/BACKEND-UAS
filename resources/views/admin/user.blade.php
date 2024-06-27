@@ -45,6 +45,7 @@
                                 <td>{{ $user->email }}</td>
                                 <td>{{ date('M d, Y H:i', strtotime($user->created_at)) }}</td>
                                 <td>
+                                    <!-- Tombol hapus user -->
                                     <form action="{{ route('admin.user.delete', $user->id) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this user?');">
                                         @csrf
                                         @method('DELETE')
@@ -59,7 +60,7 @@
         </div>
     </div>
 
-    <!-- SweetAlert -->
+    <!-- Cek error -->
     @if ($errors->any())
         <script>
             console.log('Errors: ', {!! json_encode($errors->all()) !!});

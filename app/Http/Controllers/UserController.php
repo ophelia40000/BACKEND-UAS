@@ -6,17 +6,20 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
+    // Mengambil data dari database dan tampilkan
     public function index()
     {
         $users = User::all();
         return view('users.index', compact('users'));
     }
 
+    // Buat user baru
     public function create()
     {
         return view('users.create');
     }
 
+    // Simpan data
     public function store(Request $request)
     {
         $request->validate([

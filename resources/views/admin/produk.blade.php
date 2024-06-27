@@ -29,7 +29,7 @@
                 <h1>Products Management</h1>
             </header>
             <div class="content">
-                <!-- Form for adding new products -->
+                <!-- Tambah produk -->
                 <form action="{{ route('admin.products.store') }}" method="POST" class="add-product-form">
                     @csrf
                     <input type="text" name="name" placeholder="Product Name" required>
@@ -40,7 +40,6 @@
                     <button type="submit" class="add-btn">Add Product</button>
                 </form>
 
-                <!-- Table displaying all products -->
                 <table>
                     <thead>
                         <tr>
@@ -72,7 +71,7 @@
         </div>
     </div>
 
-    <!-- Edit Product Modal -->
+    <!-- Ubah detail produk -->
     <div class="modal fade" id="editProductModal" tabindex="-1" role="dialog" aria-labelledby="editProductModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">

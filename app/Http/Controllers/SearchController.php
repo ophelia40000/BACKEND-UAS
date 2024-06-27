@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Product; // Pastikan Anda mengimpor model Product yang sesuai
+use App\Models\Product;
 
 class SearchController extends Controller
 {

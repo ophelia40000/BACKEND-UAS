@@ -16,15 +16,18 @@ class PaymentController extends Controller
 
         $YOUR_DOMAIN = 'http://localhost:8000';
 
+        // Ambil item dari cart
         $items = json_decode($request->input('items'), true);
 
+        // Buat order kosong
         $line_items = [];
 
+        // Masukkan item ke order bersama dengan detail produk yang dibeli
         foreach ($items as $item) {
             $line_items[] = [
                 'price_data' => [
                     'currency' => 'idr',
-                    'unit_amount' => $item['product']['price'] * 100, // Stripe requires amount in cents
+                    'unit_amount' => $item['product']['price'] * 100,
                     'product_data' => [
                         'name' => $item['product']['name'],
                     ],
@@ -33,6 +36,7 @@ class PaymentController extends Controller
             ];
         }
 
+        // Kirim data pembayaran dan informasi produk ke stripe
         try {
             $checkout_session = Session::create([
                 'payment_method_types' => ['card'],

@@ -1,0 +1,3 @@
+"id","name","email","email_verified_at","password","role","remember_token","created_at","updated_at"
+"1","admin","admin@gmail.com",NULL,"$2y$10$VglSrU4VX9xx1iQ9aZuj.ecGhB1J4dC3r6J4qzKpmj5EHFHbA6i/u","admin",NULL,"2024-06-20 14:25:34","2024-06-20 14:25:34"
+"2","raffi","raffihermawan69@gmail.com",NULL,"$2y$10$thSuQomtLc.92nWLcV7Om.lndQBWuT/LL8Q7NVfVf9DpEySIDpKNi","user",NULL,"2024-06-20 14:29:46","2024-06-20 14:29:46"

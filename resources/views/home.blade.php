@@ -29,59 +29,30 @@
         </div>
     </div>
 
-        <div class="small-container">
-            <h2>Hot Releases</h2>
-            <div class="line1"></div>
-            <div class="child">
-                <div class="childprods">
-                    <a href="./product_details.html"><img src="{{ asset('images/image3.jpg') }}"></a>
-                    <h4>T-Shirts for Men</h4>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-o"></i>
-                        <i class="fa fa-star-o"></i>
-                    </div>
-                    <p>$41.99</p>
-                </div>
-                <div class="childprods">
-                    <a href="./product_details.html"><img src="{{ asset('images/image4.jpg') }}"></a>
-                    <h4>Sports Shoes </h4>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-half-o"></i>
-                    </div>
-                    <p>$139.99</p>
-                </div>
-                <div class="childprods">
-                    <a href="./product_details.html"><img src="{{ asset('images/image5.jpg') }}"></a>
-                    <h4>Casual Hoodies</h4>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                    </div>
-                    <p>$59.99</p>
-                </div>
-                <div class="childprods">
-                    <a href="./product_details.html"><img src="{{ asset('images/image6.jpg') }}"></a>
-                    <h4>T-Shirts for Women</h4>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-half-o"></i>
-                        <i class="fa fa-star-o"></i>
-                        <i class="fa fa-star-o"></i>
-                    </div>
-                    <p>$39.99</p>
-                </div>
+    <div class="small-container">
+    <h2>Hot Releases</h2>
+    <div class="line1"></div>
+    <div class="child">
+        @foreach ($products as $product)
+        <div class="childprods">
+            <a href="./product_details.html"><img src="{{ asset($product->image) }}"></a>
+            <h4>{{ $product->name }}</h4>
+            <div class="rating">
+                <!-- Tampilkan 5 bintang penuh untuk setiap produk -->
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
             </div>
+            <p>Rp{{ $product->price }}</p>
+        </div>
+        @endforeach
+    </div>
+</div>
+
+</div>
+
             <h2>Latest Releases</h2>
             <div class="line1"></div>
             <div class="child">

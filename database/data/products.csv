@@ -1,0 +1,5 @@
+"id","name","price","quantity","image","created_at","updated_at","stripeId"
+"9","Gaun Putih","300000.00",0,"http://localhost:8000/images/image3.jpg","2024-06-20 14:27:28","2024-06-27 10:34:26","asdsad"
+"10","Baju Tidur","120000.00",0,"http://localhost:8000/images/image4.jpg","2024-06-20 14:27:54","2024-06-20 15:33:12","dasasdsad"
+"11","Baju Santai","80000.00",2,"http://localhost:8000/images/image5.jpg","2024-06-20 14:28:23","2024-06-27 12:46:08","asdasd"
+"12","Gaun Hitam Elegan","450000.00",0,"http://localhost:8000/images/image6.jpg","2024-06-20 14:29:03","2024-06-20 16:04:25","asdsad"

@@ -108,7 +108,7 @@
             text: '{{ $errors->first() }}',
             customClass: {
                 popup: 'swal-popup-custom',
-                title: 'swal-title-custom', // Kustom class untuk gaya popup// Kustom class untuk gaya konten
+                title: 'swal-title-custom',
             },
         });
     </script>
@@ -205,7 +205,7 @@
                 });
             });
 
-            setInterval(showNextItem, 5000); // Change item every 5 seconds
+            setInterval(showNextItem, 5000);
 
             updateCarousel();
         });

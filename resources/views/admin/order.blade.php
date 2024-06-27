@@ -56,6 +56,7 @@
                                 <td>{{ $order->status }}</td>
                                 <td>Rp{{ number_format($order->total_price, 2, ',', '.') }}</td>
                                 <td class="action-buttons">
+                                    <!-- Tombol approve atau reject order user -->
                                     @if ($order->status === 'pending')
                                         <form action="{{ route('admin.orders.approve', $order->id) }}" method="POST">
                                             @csrf
@@ -75,7 +76,7 @@
         </div>
     </div>
 
-    <!-- SweetAlert -->
+    <!-- Cek error -->
     @if ($errors->any())
         <script>
             console.log('Errors: ', {!! json_encode($errors->all()) !!});
